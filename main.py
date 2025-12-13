@@ -403,7 +403,7 @@ if __name__ == "__main__":
             nodes_str = " ".join(str(v) for v in nodes)
 
             # Write the complete line: "w(c) v1 v2 v3 ...\n"
-            f.write(f"{weight} {nodes_str}\n")
+            f.write(f"{weight} {nodes_str}\n") 
             
     print(f"\n✅ Successfully created file: '{outputFileName}'")
     print(f"   |P| = {P}, |C| = {C}")
