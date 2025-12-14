@@ -7,12 +7,11 @@ TIME_LIMIT:= 10m
 MEM_LIMIT:= 1048576
 TEST_DIR:= test-instances
 STUDENT_OUT_DIR:= student-test-outputs
-TIMEOUT := gtimeout
 #  YOU MAY CHANGE THE VARIABLES BELOW AS NEEDED
 MAIN_SCRIPT:= main.py
 STUDENT_TEST_DIR:= student-test-cases
 OUT_DIR:= outputs
-
+TIMEOUT := $(shell command -v timeout >/dev/null 2>&1 && echo timeout || echo gtimeout) # macOS or Linux
 TEST_FILES := $(wildcard $(TEST_DIR)/*.graph)
 STUDENT_TEST_FILES := $(wildcard $(STUDENT_TEST_DIR)/*.graph)
 
